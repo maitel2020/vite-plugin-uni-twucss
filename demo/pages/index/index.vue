@@ -13,8 +13,8 @@
 				class="text-red-400 dark:text-green-400 m-10rpx p-l-20rpx p-r-20rpx">纯H5和纯app-vue不需要用此插件，因为都能支持tailwindcss、windicss、unocss</text>
 			<text
 				class="text-red-400 dark:text-green-400 m-10rpx p-l-20rpx p-r-20rpx">有些格式化工具会把style里的特殊符合格式成错误格式，如把dark:text-green-400会格式成dark: text-green-400，dark:和text-green-400被分开了</text>
-				<text
-					class="text-red-400 dark:text-green-400 m-10rpx p-l-20rpx p-r-20rpx">若要测试tailwindcss，需要删除代码里所有@apply，再改成支持tailwindcss的@apply样式，因为该demo的@apply样式在tailwindcss下会报错</text>
+			<text
+				class="text-red-400 dark:text-green-400 m-10rpx p-l-20rpx p-r-20rpx">若要测试tailwindcss，需要删除代码里所有@apply，再改成支持tailwindcss的@apply样式，因为该demo的@apply样式在tailwindcss下会报错</text>
 			<button class="i-carbon-sun dark:i-carbon-moon text-red-400 dark:text-green-400 !m-50rpx"
 				@click="handleClick" />
 
