@@ -1,0 +1,19 @@
+{
+  "name": "vite-plugin-uni-twucss",
+  "version": "1.0.1",
+  "description": "使tailwindcss、windicss、unocss编译出来的css能够支持uniapp的小程序端、app-nvue端",
+  "main": "vite-plugin-uni-twucss.js",
+  "keywords": [
+    "tailwindcss",
+    "windicss",
+    "unocss",
+    "uniapp",
+    "vite-plugin-uni-twucss"
+  ],
+  "repository": "https://github.com/maitel2020/vite-plugin-uni-twucss",
+  "author": "maitel",
+  "license": "MIT",
+  "dependencies": {
+    "process-nextick-args": "^2.0.1"
+  }
+}

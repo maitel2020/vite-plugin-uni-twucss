@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@iconify-json/carbon": "^1.1.4",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24",
+    "unocss": "^0.33.5",
+    "vite-plugin-uni-twucss": "^1.0.1",
+    "vite-plugin-windicss": "^1.8.4",
+    "windicss": "^3.5.3"
+  }
+}
