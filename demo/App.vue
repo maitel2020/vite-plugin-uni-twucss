@@ -15,10 +15,22 @@
 
 <style>
 	/*每个页面公共css */
+
+
+
+	.themeRedCss {
+		@apply  !bg-red-500;
+	}
+
+	.themeGreenCss {
+		@apply  !bg-green-500;
+	}
+
+	.themeBlueCss {
+		@apply  !bg-blue-500;
+	}
 	
-	
-	/* #ifdef APP-NVUE */
-	
-	
-	/* #endif */
+	.themeRedCss .themeCss,.themeGreenCss .themeCss,.themeBlueCss .themeCss {
+		@apply  !text-white;
+	}
 </style>

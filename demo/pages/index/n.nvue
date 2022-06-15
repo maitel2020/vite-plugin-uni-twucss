@@ -3,7 +3,7 @@
 
 		<view class="content ">
 
-			<text class="text1">因受uniapp打包机制的影响，此插件下app-nvue只支持@apply写法，不支持class写法</text>
+			<text class="text1 themeCss">因受uniapp打包机制的影响，此插件下app-nvue只支持@apply写法，不支持class写法</text>
 
 			<button class="i-carbon-sun dark:i-carbon-moon text-red-400 dark:text-green-400 !m-50rpx"
 				 />
@@ -120,6 +120,7 @@
 	.text1 {
 		@apply text-red-400 dark:text-green-400 m-50rpx p-l-20rpx p-r-20rpx
 	}
+	
 
 	.content {
 		display: flex;

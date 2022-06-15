@@ -1,58 +1,80 @@
 <template>
-	<view :class="{dark:isDark}" >
-		<view class="darkCss dark:text-gray-100 dark:bg-gray-800">
+	<view :class="[theme===1?'dark':'']">
+		<view class="darkCss  bg-white dark:bg-gray-800 transition-background-color duration-200"
+			:class="[theme===0?'themeWhiteCss':theme===2?'themeRedCss':theme===3?'themeGreenCss':theme===4?'themeBlueCss':'']">
 			<slot></slot>
 		</view>
 	</view>
 </template>
 
+
 <script setup>
 	import {
-		ref
+		ref,onMounted
 	} from "vue"
 
 	import {
 		onLoad
 	} from "@dcloudio/uni-app";
 
-	let isDark = ref(true)
-	let value = uni.getStorageSync('isDark');
-	
-	if(value ===""){
-		value = isDark.value
+	let theme = ref(0)
+	let value = uni.getStorageSync('theme');
+
+	if (value === "") {
+		value = theme.value
 	}
-	
-	isDark.value = value
-	
-	
+
+	theme.value = value
 	
 	uni.setStorage({
-		key: 'isDark',
-		data: isDark.value
+		key: 'theme',
+		data: theme.value
 	});
-
-	onLoad(() => {
+	
+	
+	onMounted(()=>{
+		// uniapp的支付宝小程序存在bug，无法执行onLoad,所以使用onMounted
 		console.log("u-page")
-		uni.$on("isDark", (data) => {
-			isDark.value = data
+		uni.$on("theme", (data) => {
+			theme.value = data
 			uni.setStorage({
-				key: 'isDark',
-				data: isDark.value,
+				key: 'theme',
+				data: theme.value,
 				success: () => {
-					console.log('isDark--success');
+					console.log('theme--success');
 				}
 			});
 		})
 	})
+	
+	
+	// onLoad(() => {
+		
+	// 	// uniapp的支付宝小程序存在bug，无法执行onLoad
+	// 	console.log("u-page")
+		
 
-	defineExpose({
-		isDark
-	})
+	// 	uni.$on("theme", (data) => {
+	// 		theme.value = data
+	// 		uni.setStorage({
+	// 			key: 'theme',
+	// 			data: theme.value,
+	// 			success: () => {
+	// 				console.log('theme--success');
+	// 			}
+	// 		});
+	// 	})
+	// })
 </script>
 
 
-<style scoped>
+<style lang="scss">
+	/* .nvue目前只能用@apply来实现 */
 	.darkCss {
-		@apply dark:text-gray-100 dark:bg-gray-800;
+		@apply bg-white dark: bg-gray-800;
+	}
+
+	.themeWhiteCss {
+		@apply bg-white;
 	}
 </style>

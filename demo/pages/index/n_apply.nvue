@@ -1,7 +1,7 @@
 <template>
 	<u-page>
 		<view class="content">
-			<text class="text1 common">因受uniapp打包机制的问题，此插件下app-nvue只支持@apply这种写法</text>
+			<text class="text1 common themeCss">因受uniapp打包机制的问题，此插件下app-nvue只支持@apply这种写法</text>
 
 			<button class="test-icon common"  />
 			<button  class="mt-[20rpx]">
