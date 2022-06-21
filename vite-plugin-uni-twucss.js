@@ -192,7 +192,7 @@ function updateWXCode(match) {
 
 	// 如text="sm white"改成data-css-text="sm white"
 	match = match.replace(wxCodeReg1, (match1) => {
-		if (!match1.includes("bind")) {
+		if (!match1.includes("bind") && !match1.includes("u-")) {
 			match1 = match1.replace(/\s/, "");
 			return " data-css-" + match1;
 		}
@@ -215,7 +215,8 @@ function updateWXCode(match) {
 				!match2.includes("data-css-") &&
 				!match2.includes("style=") &&
 				!match2.includes("hover=") &&
-				!match2.includes("placeholder=")
+				!match2.includes("placeholder=") &&
+				!match2.includes("mode=")
 			) {
 				return `data-css-${match2}='${match2}'`;
 			}
