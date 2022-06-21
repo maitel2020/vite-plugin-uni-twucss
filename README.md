@@ -4,7 +4,7 @@
 
 # 插件说明
 1. 将tailwindcss、windicss、unocss编译后的css再次编译成支持uniapp中的小程序端和app-nvue
-2. 【h5端、纯app-vue、百度小程序、支付宝小程序】不需要使用此插件也能支持tailwindcss、windicss、unocss，所以用了此插件也不会去编译它们
+2. 【h5端、纯app-vue、百度小程序、支付宝小程序、钉钉小程序】不需要使用此插件也能支持tailwindcss、windicss、unocss，所以用了此插件也不会去编译它们
 3. tailwindcss、windicss、unocss编译后的css在各端的展示上都有比较大的差别
 4. 本开发人员主要用于需要暗黑模式、多主题的项目上，尽量使用简单写法，写法越怪，问题越多
 5. vite-plugin-uni-twucss插件只起到皮毛作用（最好还是官方去适配），主要还是uniapp、tailwindcss、windicss、unocss它们之间先能编译成功且能编译出对应的css
