@@ -49,3 +49,10 @@
 |参数	|说明	|默认值	|可选值	|
 |--		|--		|--		|--	|
 |	source	|app-nvue时使用，修改对应的css		|	unocss	|windicss/tailwindcss	|
+
+# 其他
+一、 如何使tailwind.config.js生效？
+	1.因为demo配置的unocss，所以先把vite.config.js有关unocss的代码注释掉,并取消注释require('tailwindcss')(),其他有引入unocss的也要注释掉
+	2.修改tailwind包的源代码， 在node_modules\tailwindcss里全局搜索./tailwind.config.js,把它改成绝对路径
+![](README_files/1.jpg)
+	3.还是因为demo用的是unocss的代码，不符合tailwindcss代码规范，所以demo还是会报错，需要把page文件夹和components文件夹下的文件都删掉，自己写个符合tailwindcss代码的demo测试。
