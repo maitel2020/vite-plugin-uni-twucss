@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@iconify-json/carbon": "^1.1.7",
+    "unocss": "^0.45.4",
+    "vite-plugin-uni-twucss": "1.0.7"
+  }
+}

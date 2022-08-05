@@ -7,10 +7,7 @@ import App from './App'
 
 
 
-import 'uno.css';
-// import 'virtual:windi.css'
-
-// import '@/index.css'
+import 'virtual:windi.css'
 
 
 

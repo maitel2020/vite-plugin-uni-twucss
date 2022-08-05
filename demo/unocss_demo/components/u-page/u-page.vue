@@ -1,6 +1,6 @@
 <template>
 	<view :class="[theme===1?'dark':'']">
-		<view class="darkCss  bg-white dark:bg-gray-800 transition-background-color duration-200"
+		<view class="darkCss  bg-white dark:bg-gray-800 transition duration-200"
 			:class="[theme===0?'themeWhiteCss':theme===2?'themeRedCss':theme===3?'themeGreenCss':theme===4?'themeBlueCss':'']">
 			<slot></slot>
 		</view>

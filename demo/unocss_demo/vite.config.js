@@ -6,6 +6,7 @@ import uni from "@dcloudio/vite-plugin-uni";
 
 import uniTwuCssPlugin from 'vite-plugin-uni-twucss';
 
+
 import Unocss from 'unocss/vite'
 import {
 	presetAttributify,
@@ -14,8 +15,6 @@ import {
 	presetIcons
 }
 from 'unocss'
-
-// import WindiCSS from 'vite-plugin-windicss'
 
 export default defineConfig({
 
@@ -40,17 +39,9 @@ export default defineConfig({
 				})
 			],
 		}),
-		// WindiCSS(),
 		uniTwuCssPlugin({
 			source: "unocss"
 		}),
 
-	],
-	// css: {
-	// 	postcss: {
-	// 		plugins: [
-	// 			require('tailwindcss')(),
-	// 		]
-	// 	}
-	// }
+	]
 })

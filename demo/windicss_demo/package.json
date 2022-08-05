@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "vite-plugin-uni-twucss": "1.0.7",
+    "vite-plugin-windicss": "^1.8.7",
+    "windicss": "^3.5.6"
+  }
+}

@@ -1,0 +1,192 @@
+<template>
+	<u-page>
+		<view class="content">
+			<text class="text1 common themeCss">因受uniapp打包机制的问题，此插件下app-nvue只支持@apply这种写法</text>
+
+			<button class="test-icon common"  />
+			<button  class="mt-[20rpx]">
+				<text class="common">光亮/暗黑</text>
+			</button>
+			<text class="common title">{{title}}</text>
+			<button class="test1"><text class="common">test1</text></button>
+			<button class="test2"><text class="common">test2</text></button>
+			<text class="test3">test3</text>
+			<text class="test4">test4</text>
+			<text class="test5 ">test5</text>
+			<text :class="'test6'">test6</text>
+			<text class="test7">test7</text>
+			<text class="test8">test8</text>
+
+
+			<button class="test9">
+				<text font="mono light" text="sm white">test9</text>
+			</button>
+			<text class="test10">test10</text>
+			<text class="test-red">red</text>
+			<button rounded-20rpx rounded><text class="test11">test11</text></button>
+
+			<button class=" btn--secondary"><text class="btn--secondary--text">test12</text></button>
+			<button class=" btn--primary"><text class="btn--primary--text">test13</text></button>
+
+		</view>
+
+		<button class="test14">
+			test14
+		</button>
+
+
+		<text :class="[testRef?'test15-1':'test15-2']">test15</text>
+
+
+		<view class="space-y-[100rpx]">
+			<view><text class="test18">test18</text></view>
+			<view> <text class="test19">test19</text> </view>
+			<view> <text class="test20">test20</text> </view>
+			<view class="test21">test21</view>
+			<view class="test22"> <text class="common">test22</text> </view>
+		</view>
+		<text class="test23">23</text>
+
+
+	</u-page>
+</template>
+
+<script setup>
+	import {
+		ref
+	} from "vue"
+
+	let title = ref("Hello")
+	let testRef = ref(false)
+	
+</script>
+
+
+
+
+<style>
+	.text1 {
+		@apply m-5  
+	}
+
+	.test-icon {
+	}
+
+	.common {
+		@apply text-red-400 dark:text-green-400;
+	}
+
+	.test1 {
+	}
+
+	.test2 {
+	}
+
+	.test3 {
+		@apply grid-cols-[auto,1fr,30px];
+	}
+
+
+	/* unocss存在bug */
+	/* .test4 {
+		@apply  animate-ping animate-count-infinite animate-1s;
+	}
+
+	.test5 {
+		@apply text-32rpx fw100 animate-bounce-alt animate-count-infinite animate-1s;
+	} */
+	/* unocss存在bug */
+	.test6 {
+		@apply text-red-400;
+	}
+
+	.test7 {
+		@apply bg-white dark:hover:bg-blue-800 dark:hover:font-medium dark:hover:text-white ;
+	}
+
+	.test8 {
+		@apply p-1  text-red-400 text-green-300;
+	}
+
+	.test9 {
+	}
+
+	.test10 {
+		@apply btn ;
+	}
+
+	.test11 {
+		@apply text-red-400 dark:text-blue-400;
+	}
+
+	.test14 {
+	}
+	.test-red {
+	}
+
+
+	.test15-1 {
+		@apply text-red-400 dark:text-green-400;
+	}
+
+	.test15-2 {
+		@apply text-[#ff0000] dark:text-[#00aaff];
+	}
+
+	.test18 {
+	}
+
+	.test19 {
+		@apply leading-[90rpx] text-[#55aaff];
+	}
+
+	.test20 {
+		@apply text-[#55aaff];
+	}
+
+	.test21 {
+		@apply bg-opacity-[0.51] flex items-center justify-center h-[100px] w-[100px] rounded-[40px] bg-[#123456] bg-opacity-[0.54] text-[#ffffff];
+	}
+
+	.test22 {
+		@apply border-[#098765] border-solid border-opacity-[0.44];
+	}
+
+	.test23 {
+	}
+
+
+	.btn {
+	}
+
+	.btn--primary {
+		@apply bg-rose-500;
+	}
+
+	.btn--primary--text {
+	}
+
+	.btn--secondary {
+		@apply bg-gray-100;
+	}
+
+	.btn--secondary--text {
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	
+
+	
+
+	.title {
+		font-size: 36rpx;
+		color: #8f8f94;
+	}
+</style>

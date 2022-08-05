@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.1.7",
+    "vite-plugin-uni-twucss": "1.0.7"
+  }
+}
